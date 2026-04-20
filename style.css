@@ -1,94 +1,47 @@
-/* Общие настройки */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.lang-section {
+    padding: 40px 0;
 }
 
-body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background-color: #ffffff;
-    color: #1d1d1f; /* Мягкий черный, как у Apple */
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    padding: 40px 20px;
+.badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border: 1px solid #1d1d1f;
+    margin-bottom: 20px;
 }
 
-/* Контейнер для центрирования контента */
-header, main, footer {
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-/* Шапка */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 80px;
-}
-
-.logo {
-    font-weight: 600;
-    font-size: 1.2rem;
-    letter-spacing: -0.02em;
-}
-
-/* Переключатель языков */
-.lang-switcher {
-    font-size: 0.85rem;
+.lead {
+    font-size: 1.25rem;
     font-weight: 400;
-}
-
-.lang-switcher a {
-    text-decoration: none;
+    margin-bottom: 40px;
     color: #1d1d1f;
-    opacity: 0.4;
-    transition: opacity 0.2s;
 }
 
-.lang-switcher a.active {
-    opacity: 1;
-    font-weight: 600;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-.lang-switcher a:hover {
-    opacity: 1;
+/* На мобильных устройствах колонки станут друг под другом */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Контентная часть */
-h1 {
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 30px;
-    color: #86868b; /* Серый заголовок секции */
+.divider {
+    border: 0;
+    border-top: 1px solid #e5e5e7;
+    margin: 60px 0;
 }
 
-.article-list {
-    list-style: none;
-}
-
-.article-list li {
-    margin-bottom: 15px;
-}
-
-.article-list a {
-    font-size: 1.2rem;
-    color: #1d1d1f;
+.contact a {
+    color: #0066cc; /* Синий цвет для ссылки связи */
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
 }
 
-.article-list a:hover {
-    border-bottom: 1px solid #1d1d1f;
-}
-
-/* Футер */
-footer {
-    margin-top: 100px;
-    font-size: 0.8rem;
-    color: #86868b;
+.contact a:hover {
+    text-decoration: underline;
 }
