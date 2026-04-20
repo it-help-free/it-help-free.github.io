@@ -1,47 +1,163 @@
+/* 1. Сброс стилей и база */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #1d1d1f; /* Глубокий серый (Apple Style) */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 60px 20px;
+}
+
+/* 2. Контейнер */
+header, main, footer {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* 3. Шапка */
+header {
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    text-transform: lowercase;
+}
+
+/* 4. Типографика и секции */
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #86868b;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.2rem;
+    color: #424245;
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+/* 5. Сетки и списки */
 .lang-section {
-    padding: 40px 0;
+    padding-bottom: 20px;
 }
 
 .badge {
     display: inline-block;
     font-size: 0.7rem;
     font-weight: 700;
-    padding: 2px 6px;
+    padding: 2px 8px;
     border: 1px solid #1d1d1f;
-    margin-bottom: 20px;
-}
-
-.lead {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 40px;
-    color: #1d1d1f;
+    margin-bottom: 25px;
+    border-radius: 3px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr; /* Левая колонка чуть шире */
     gap: 40px;
+    margin-top: 30px;
 }
 
-/* На мобильных устройствах колонки станут друг под другом */
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+.article-list, .info-list {
+    list-style: none;
 }
 
+.article-list li {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    padding-left: 0;
+}
+
+/* Маленькие черточки перед списком "Помогу с этим" */
+.article-list li::before {
+    content: "— ";
+    color: #d2d2d7;
+}
+
+.info-list li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border-left: 1px solid #d2d2d7;
+    color: #424245;
+}
+
+.info-list li strong {
+    color: #1d1d1f;
+}
+
+/* 6. Разделители и контакты */
 .divider {
     border: 0;
-    border-top: 1px solid #e5e5e7;
-    margin: 60px 0;
+    border-top: 1px solid #f2f2f2;
+    margin: 80px 0;
+}
+
+.contact {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #f5f5f7;
+    border-radius: 12px;
 }
 
 .contact a {
-    color: #0066cc; /* Синий цвет для ссылки связи */
+    color: #0066cc;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .contact a:hover {
     text-decoration: underline;
+}
+
+/* 7. Футер */
+footer {
+    margin-top: 120px;
+    padding-top: 20px;
+    border-top: 1px solid #f2f2f2;
+    font-size: 0.8rem;
+    color: #86868b;
+}
+
+/* 8. Адаптивность для телефонов */
+@media (max-width: 650px) {
+    body {
+        padding: 40px 20px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr; /* Колонки встают в один ряд */
+        gap: 30px;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
 }
